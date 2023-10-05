@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise Finder</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
+    <title>Exercise App</title>
 </head>
 <body>
-    <header>
-        <h1>Exercise Finder</h1>
-    </header>
-    <main>
-        <div class="exercise-container" id="exercise-list"></div>
-    </main>
+    <div class="swiper-container">
+    <div class="swiper-wrapper" id="exercise-list"></div>
+
+    <!-- Navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>

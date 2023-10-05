@@ -16,7 +16,7 @@ async function fetchExercises() {
 
         data.forEach(exercise => {
             const exerciseContainer = document.createElement('div');
-            exerciseContainer.classList.add('exercise-container');
+            exerciseContainer.classList.add('swiper-slide'); // Add the 'swiper-slide' class
 
             const card = document.createElement('div');
             card.classList.add('card');
@@ -37,6 +37,15 @@ async function fetchExercises() {
 
             exerciseContainer.appendChild(card);
             exerciseList.appendChild(exerciseContainer);
+        });
+
+        // Initialize Swiper
+        const swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            loop: true, // Enable loop mode for continuous navigation
         });
     } catch (error) {
         console.error(error);
